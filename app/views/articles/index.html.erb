@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p1 {
+    background-color: red;
+}
+p2 {
+    background-color: pink;
+}
+p3 {
+    color: blue;
+}
+table, th, td {
+  border: 5px;
+  border-color: red green pink yellow;
+  border-style: dotted solid dotted solid;
+  /* border-top-style: dotted; */
+  /* border-right-style: solid; */
+  /* border-bottom-style: dotted; */
+  /* border-left-style: solid; */
+  margin: 300px 70px 0px 1000px;
+}
+body {
+    background-color: lightblue;
+}
+h1 {
+  font-family: "Brush Script MT";
+  font-style: italic;
+  text-align: center;
+  color: yellow;
+  background-color: green;
+}
+</style>
+</head>
+<body>
+    <h1>Articles</h1>
+    <a href="https://www.w3schools.com">Visit W3Schools</a>
+    <table>
+        <tr>
+            <th><p1>title</p1></th>
+            <th><p2>body</p2></th>
+        </tr>
+            <% @articles.each do |article| %>
+        <tr>
+            <td><p3><%= article.title %></p3></td>
+            <td><%= article.body %></td>        
+        </tr>
+        <% end %>
+    </table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
